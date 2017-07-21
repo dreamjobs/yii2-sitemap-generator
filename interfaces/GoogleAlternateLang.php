@@ -1,13 +1,13 @@
 <?php
 
-namespace demi\sitemap\interfaces;
+namespace dreamjobs\sitemap\interfaces;
 
 /**
  * Interface GoogleAlternateLang
  *
  * @url https://support.google.com/webmasters/answer/2620865
  *
- * @package demi\sitemap\interfaces
+ * @package dreamjobs\sitemap\interfaces
  */
 interface GoogleAlternateLang
 {

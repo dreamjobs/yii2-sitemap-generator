@@ -1,6 +1,6 @@
 <?php
 
-namespace demi\sitemap\interfaces;
+namespace dreamjobs\sitemap\interfaces;
 
 /**
  * Basic interface for general sitemap.xml file
@@ -9,7 +9,7 @@ namespace demi\sitemap\interfaces;
  * @property int $sitemapBatchSize       Size of one part selected from DB. Default is 10.
  * @property bool $sitemapSwithLanguages If TRUE - DataHandler will be swith App language to currently handled language.
  *
- * @package demi\sitemap\interfaces
+ * @package dreamjobs\sitemap\interfaces
  */
 interface Basic
 {
@@ -128,4 +128,4 @@ interface Basic
      * @return string
      */
     public function getSitemapPriority($lang = null);
-} 
+}

@@ -1,8 +1,8 @@
 <?php
 
-namespace demi\sitemap;
+namespace dreamjobs\sitemap;
 
-use demi\sitemap\interfaces\Basic;
+use dreamjobs\sitemap\interfaces\Basic;
 use yii\base\Object;
 
 class SitemapUrlNode extends Object

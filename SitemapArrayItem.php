@@ -1,6 +1,6 @@
 <?php
 
-namespace demi\sitemap;
+namespace dreamjobs\sitemap;
 
 class SitemapArrayItem
 {

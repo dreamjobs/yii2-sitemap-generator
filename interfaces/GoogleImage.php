@@ -1,13 +1,13 @@
 <?php
 
-namespace demi\sitemap\interfaces;
+namespace dreamjobs\sitemap\interfaces;
 
 /**
  * Interface GoogleImage
  *
  * @url https://support.google.com/webmasters/answer/178636
  *
- * @package demi\sitemap\interfaces
+ * @package dreamjobs\sitemap\interfaces
  */
 interface GoogleImage
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace demi\sitemap;
+namespace dreamjobs\sitemap;
 
 use Yii;
 
@@ -8,7 +8,7 @@ use yii\console\Controller;
 
 /**
  * Class SitemapController
- * @package demi\sitemap
+ * @package dreamjobs\sitemap
  *
  * @property SitemapBuilder $builder
  */

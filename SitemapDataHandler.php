@@ -1,6 +1,6 @@
 <?php
 
-namespace demi\sitemap;
+namespace dreamjobs\sitemap;
 
 use Yii;
 use yii\base\Object;
@@ -8,13 +8,13 @@ use yii\db\ActiveRecord;
 use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Console;
-use demi\sitemap\interfaces\Basic;
-use demi\sitemap\interfaces\GoogleAlternateLang;
-use demi\sitemap\interfaces\GoogleImage;
+use dreamjobs\sitemap\interfaces\Basic;
+use dreamjobs\sitemap\interfaces\GoogleAlternateLang;
+use dreamjobs\sitemap\interfaces\GoogleImage;
 
 /**
  * Class SitemapDataHandler
- * @package demi\sitemap
+ * @package dreamjobs\sitemap
  *
  * @property SitemapBuilder $builder
  */
@@ -87,7 +87,7 @@ class SitemapDataHandler extends Object
 
             if (!$model instanceof Basic) {
                 $this->printMessage('Warning: model "' . $className . '" does not implement interface ' .
-                    '"demi\sitemap\interfaces\Basic"');
+                    '"dreamjobs\sitemap\interfaces\Basic"');
 
                 continue;
             }
@@ -189,7 +189,7 @@ class SitemapDataHandler extends Object
             }
         } elseif (!$item instanceof Basic) {
             $this->printMessage('Warning: item "' . var_export($item, true) .
-                '" does not compatible with "demi\sitemap\interfaces\Basic" or Array');
+                '" does not compatible with "dreamjobs\sitemap\interfaces\Basic" or Array');
 
             return false;
         }
