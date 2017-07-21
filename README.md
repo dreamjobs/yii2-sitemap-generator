@@ -7,7 +7,7 @@ Installation
 ------------
 Run
 ```code
-php composer.phar require "demi/sitemap-generator" "~1.0"
+php composer.phar require "dreamjobs/sitemap-generator" "~1.0"
 ```
 or
 
@@ -16,7 +16,7 @@ Add to composer.json in your project
 ```json
 {
 	"require": {
-  		"demi/sitemap-generator": "~1.0"
+  		"dreamjobs/sitemap-generator": "~1.0"
 	}
 }
 ```
@@ -32,7 +32,8 @@ Edit "./console/config/main.php"
 return [
     'controllerMap' => [
         'sitemap' => [
-            'class' => 'demi\sitemap\SitemapController',
+            'class' => 'dreamjobs\sitemap\SitemapController',
+			'baseUrl' => 'https://dreamjobs.com.co',
             'modelsPath' => '@console/models/sitemap', // Sitemap-data models directory
             'modelsNamespace' => 'console\models\sitemap', // Namespace in [[modelsPath]] files
             'savePathAlias' => '@frontend/web', // Where would be placed the generated sitemap-files

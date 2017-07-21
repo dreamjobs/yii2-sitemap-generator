@@ -36,10 +36,14 @@ class SitemapDataHandler extends Object
     /** @var string Original site language. Need for swith app languages */
     protected static $_appLanguage;
 
-    public function __construct($savePathAlias, $sitemapFileName, $config = [])
+    /** @var String baseUrl */
+    private $baseUrl = null;
+
+    public function __construct($savePathAlias, $sitemapFileName, $baseUrl, $config = [])
     {
         $this->savePathAlias = $savePathAlias;
         $this->sitemapFileName = $sitemapFileName;
+        $this->baseUrl = $baseUrl;
 
         parent::__construct($config);
     }
@@ -250,6 +254,7 @@ class SitemapDataHandler extends Object
                 'savePathAlias' => $this->savePathAlias,
                 'sitemapFileName' => $this->sitemapFileName,
                 'schemas' => $this->_schemas,
+                'baseUrl' => $this->baseUrl,
             ], $this->builderConfig);
 
             $this->_builder = Yii::createObject($config);

@@ -26,6 +26,13 @@ class SitemapBuilder extends Object
     /** @var array List of xml-files for sitemap index */
     private $_filesList = [];
 
+    private $baseUrl = null;
+
+    public function __construct()
+    {
+        $this->baseUrl = $this->baseUrl ? $this->baseUrl : Yii::$app->urlManager->baseUrl;
+    }
+
     public function writeHeader()
     {
         $header = '<?xml version="1.0" encoding="UTF-8"?>' . PHP_EOL;
@@ -180,7 +187,7 @@ class SitemapBuilder extends Object
 
         foreach ($this->_filesList as $file) {
             $xml[] = "\t<sitemap>";
-            $xml[] = "\t\t<loc>" . Yii::$app->urlManager->baseUrl . '/' . $file . '</loc>';
+            $xml[] = "\t\t<loc>" . $this->baseUrl . '/' . $file . '</loc>';
             // @todo set actual lastmod value
             $xml[] = "\t\t<lastmod>" . date(DATE_W3C) . '</lastmod>';
             $xml[] = "\t</sitemap>";

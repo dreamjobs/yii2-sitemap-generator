@@ -1,8 +1,8 @@
 {
-    "name": "demi/sitemap-generator",
+    "name": "dreamjobs/sitemap-generator",
     "description": "Yii2 component for generate sitemap.xml files.",
     "keywords": ["yii2", "sitemap", "xml", "cron"],
-    "homepage": "https://github.com/demisang/yii2-sitemap-generator#readme",
+    "homepage": "https://github.com/dreamjobs/yii2-sitemap-generator#readme",
     "type": "yii2-extension",
     "license": "GNU",
     "authors": [
@@ -11,11 +11,17 @@
             "email": "orlov_mail@mail.ru",
             "homepage": "https://orlov.io/",
             "role": "Creator"
+        },
+        {
+            "name": "Sebastian Perez",
+            "email": "s@dreamjobs.com.co",
+            "homepage": "https://dreamjobs.com.co/",
+            "role": "Contributor"
         }
     ],
     "support": {
-        "issues": "https://github.com/demisang/yii2-sitemap-generator/issues",
-        "source": "https://github.com/demisang/yii2-sitemap-generator"
+        "issues": "https://github.com/dreamjobs/yii2-sitemap-generator/issues",
+        "source": "https://github.com/dreamjobs/yii2-sitemap-generator"
     },
     "require": {
         "php": ">=5.4.0",
@@ -23,7 +29,7 @@
     },
     "autoload": {
         "psr-4": {
-            "demi\\sitemap\\": ""
+            "dreamjobs\\sitemap\\": ""
         }
     }
 }

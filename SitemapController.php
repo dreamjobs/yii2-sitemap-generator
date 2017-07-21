@@ -26,6 +26,8 @@ class SitemapController extends Controller
     public $builderConfig = [
         'urlsPerFile' => 10000,
     ];
+    /** @var string Base Url for sitemap links. As webroot: "http://example.com" */
+    public $baseUrl = null;
 
     /**
      * @inheritdoc
@@ -40,7 +42,7 @@ class SitemapController extends Controller
      */
     public function actionIndex()
     {
-        $dataHandler = new SitemapDataHandler($this->savePathAlias, $this->sitemapFileName, [
+        $dataHandler = new SitemapDataHandler($this->savePathAlias, $this->sitemapFileName, $this->baseUrl, [
             'builderConfig' => $this->builderConfig,
         ]);
 
