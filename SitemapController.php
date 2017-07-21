@@ -24,10 +24,10 @@ class SitemapController extends Controller
     public $sitemapFileName = 'sitemap.xml';
     /** @var array Default config for sitemap builder */
     public $builderConfig = [
-        'urlsPerFile' => 10000,
+        'urlsPerFile' => 100,
     ];
     /** @var string Base Url for sitemap links. As webroot: "http://example.com" */
-    public $baseUrl = null;
+    public $baseUrl;
 
     /**
      * @inheritdoc

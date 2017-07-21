@@ -26,12 +26,7 @@ class SitemapBuilder extends Object
     /** @var array List of xml-files for sitemap index */
     private $_filesList = [];
 
-    private $baseUrl = null;
-
-    public function __construct()
-    {
-        $this->baseUrl = $this->baseUrl ? $this->baseUrl : Yii::$app->urlManager->baseUrl;
-    }
+    public $baseUrl = null;
 
     public function writeHeader()
     {

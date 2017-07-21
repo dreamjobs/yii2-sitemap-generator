@@ -37,7 +37,7 @@ class SitemapDataHandler extends Object
     protected static $_appLanguage;
 
     /** @var String baseUrl */
-    private $baseUrl = null;
+    private $baseUrl;
 
     public function __construct($savePathAlias, $sitemapFileName, $baseUrl, $config = [])
     {
@@ -158,6 +158,7 @@ class SitemapDataHandler extends Object
 
         // Search models in db
         $query = $model->getSitemapItemsQuery($lang);
+
         if ($query instanceof \yii\db\Query) {
             // Foreach batch models
             $batchSize = static::getModelBatchSize($model);
@@ -254,7 +255,7 @@ class SitemapDataHandler extends Object
                 'savePathAlias' => $this->savePathAlias,
                 'sitemapFileName' => $this->sitemapFileName,
                 'schemas' => $this->_schemas,
-                'baseUrl' => $this->baseUrl,
+                'baseUrl' => $this->baseUrl ? $this->baseUrl : Yii::$app->urlManager->baseUrl,
             ], $this->builderConfig);
 
             $this->_builder = Yii::createObject($config);
